@@ -11,7 +11,7 @@ async function create(body) {
     service: "hotmail",
     auth: {
       user: "hi-nex@outlook.com", // user
-      pass: "Geoffrey2030", //  password
+      pass: "Geoffrey@2030", //  password
     },
     tls: {
       // do not fail on invalid certs
@@ -41,7 +41,7 @@ async function create(body) {
 
   const mailOptions = {
     from: "hi-nex@outlook.com",
-    to: "nicholasnjeru917@gmail.com",
+    to: "letstalk@hi-nex.com",
     subject: "Hi-nex",
     html: emailContent,
   };
@@ -50,7 +50,7 @@ async function create(body) {
     if (error) {
       console.error(error);
     } else {
-      console.log("Email sent: " + info.response);
+      return("Email sent: " + info.response);
     }
   });
 
