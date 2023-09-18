@@ -10,7 +10,7 @@ async function create(body) {
   const transporter = nodemailer.createTransport({
     service: "hotmail",
     auth: {
-      user: "info@goldenarenastudy.com", // user
+      user: "hi-nex@outlook.com", // user
       pass: "Geoffrey2030", //  password
     },
     tls: {
@@ -22,7 +22,7 @@ async function create(body) {
   const emailContent = `
   <div style=" padding-left: 20px; border-radius: 10px;">
     <p style="display: flex; flex-direction: column; gap: 10px;">
-      <span style="font-size: 16px;">${contact.Username}</span>
+      <span style="font-size: 16px;">${contact.FullNames}</span>
     </p>
     <p style="display: flex; flex-direction: column; gap: 10px;">
       <span style="font-size: 16px; ">${contact.Email}</span>
@@ -34,15 +34,15 @@ async function create(body) {
       <span style="font-size: 16px; ">${contact.EnquiryType}</span>
     </p>
     <p style="display: flex; flex-direction: column;">
-    <span style="font-size: 16px; ">${contact.Message}</span>
+    <span style="font-size: 16px; ">${contact.EnquiryMessage}</span>
   </p>
   </div>
 `;
 
   const mailOptions = {
-    from: "info@goldenarenastudy.com",
-    to: "study@goldenaren.com",
-    subject: "Smart Designs",
+    from: "hi-nex@outlook.com",
+    to: "nicholasnjeru917@gmail.com",
+    subject: "Hi-nex",
     html: emailContent,
   };
 
