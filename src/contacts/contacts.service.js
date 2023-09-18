@@ -5,7 +5,7 @@ const nodemailer = require("nodemailer");
 async function create(body) {
   // Call the existing create function
   const contact = body;
-
+  console.log("contact", contact);
   // Send email notification
   const transporter = nodemailer.createTransport({
     service: "hotmail",
