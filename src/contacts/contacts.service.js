@@ -1,16 +1,17 @@
+require("dotenv").config();
 const nodemailer = require("nodemailer");
 
 // ... existing code ...
 
 async function create(body) {
   // Call the existing create function
+
   const contact = body;
-  console.log("contact", contact);
   // Send email notification
   const transporter = nodemailer.createTransport({
     service: "hotmail",
     auth: {
-      user: "hi-nex@outlook.com", // user
+      user: "hinexsolutions@outlook.com", // user
       pass: "Geoffrey@2030", //  password
     },
     tls: {
@@ -40,9 +41,9 @@ async function create(body) {
 `;
 
   const mailOptions = {
-    from: "hi-nex@outlook.com",
+    from: "hinexsolutions@outlook.com",
     to: "letstalk@hi-nex.com",
-    subject: "Hi-nex",
+    subject: "Hi-nex IT solutions",
     html: emailContent,
   };
 
@@ -50,7 +51,7 @@ async function create(body) {
     if (error) {
       console.error(error);
     } else {
-      return("Email sent: " + info.response);
+      return "Email sent: " + info.response;
     }
   });
 
