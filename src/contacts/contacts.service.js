@@ -51,7 +51,7 @@ async function create(body) {
     if (error) {
       console.error(error);
     } else {
-      return "Email sent: " + info.response;
+      console.log("Email sent: " + info.response);
     }
   });
 
